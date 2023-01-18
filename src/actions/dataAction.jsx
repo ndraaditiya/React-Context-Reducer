@@ -24,8 +24,9 @@ export const postData = ({ data, dispatch }) => {
       .then((res) => {
         const { code } = res.data
         if (code === 200) {
-          // const { data } = res.data
-          dispatch({ type: INSERT_DATA, payload: data })
+          const { data: dataSaved } = res.data
+          const newData = { ...data, _id: dataSaved?._id }
+          dispatch({ type: INSERT_DATA, payload: newData })
         } else {
           console.log(res.data?.message)
         }
@@ -41,7 +42,6 @@ export const updateData = ({ data, dispatch }) => {
       .then((res) => {
         const { code } = res.data
         if (code === 200) {
-          // const { data } = res.data
           dispatch({ type: UPDATE_DATA, payload: data })
         } else {
           console.log(res.data?.message)
