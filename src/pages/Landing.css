@@ -17,7 +17,8 @@ input[type="checkbox"] {
 }
 
 .content-container {
-  text-align: left;
+  max-height: 400px;
+  overflow: auto;
 }
 
 .contents {

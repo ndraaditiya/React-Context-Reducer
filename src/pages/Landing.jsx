@@ -35,18 +35,20 @@ const Landing = () => {
       <input ref={refInput} type='text' placeholder='Todo' />
       <button onClick={handleAdd}>Add Todo</button>
       <p></p>
-      {state.map(({ todoName, isComplete, _id }, index) =>
-        <div className='content-container'>
-          <p key={index} className='contents'>
-            <span style={{ textDecoration: isComplete ? 'line-through' : 'none' }}>{todoName}</span>
-            <span>
-              <input type='checkbox' checked={isComplete ? true : false} onChange={() => handleComplete(_id, isComplete, todoName)} />
-              <i class="fa-solid fa-trash" onClick={() => handleDelete(_id)}></i>
-            </span>
-          </p>
-          <hr />
-        </div>
-      )}
+      <div className='content-container'>
+        {state.map(({ todoName, isComplete, _id }, index) =>
+          <div key={index}>
+            <p className='contents'>
+              <span style={{ textDecoration: isComplete ? 'line-through' : 'none' }}>{todoName}</span>
+              <span>
+                <input type='checkbox' checked={isComplete ? true : false} onChange={() => handleComplete(_id, isComplete, todoName)} />
+                <i className="fa-solid fa-trash" onClick={() => handleDelete(_id)}></i>
+              </span>
+            </p>
+            <hr />
+          </div>
+        )}
+      </div>
     </div>
   )
 }

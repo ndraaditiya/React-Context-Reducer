@@ -1,4 +1,4 @@
-import API from '../config/api'
+import API from '../configs/api'
 import { INSERT_DATA, SHOW_DATA, UPDATE_DATA, DELETE_DATA } from "../constants/actionType";
 
 export const getData = (dispatch) => {
