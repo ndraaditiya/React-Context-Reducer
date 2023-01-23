@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlApi = 'https://odd-blue-yak-slip.cyclic.app/'
+const urlApi = 'https://calm-plum-jaguar-tutu.cyclic.app/'
 
 const API = axios.create({
   baseURL: urlApi
