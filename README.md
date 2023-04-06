@@ -7,4 +7,4 @@ In this project, I created pretty similar workflows with React-Redux but not usi
 
 I just use two React hooks for this, useContext and useReducer. Hope you guys understand the workfloww.
 
-You can see the project on here: https://react-context-reducer-psi.vercel.app/
+You can see the project on here: https://react-context-reducer.netlify.app/
